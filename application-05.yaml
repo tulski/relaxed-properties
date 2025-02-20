@@ -1,0 +1,3 @@
+app-config:
+  tenant-timezone:
+    EN: America/New_York
