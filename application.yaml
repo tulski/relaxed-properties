@@ -1,0 +1,4 @@
+app-config:
+  tenant-timezone:
+    PL: Europe/Warsaw
+    DE: Europe/Berlin

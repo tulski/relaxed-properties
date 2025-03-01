@@ -8,6 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @SpringBootApplication
 @EnableConfigurationProperties(RelaxedPropertiesApplication.AppConfig.class)
@@ -23,6 +24,14 @@ public class RelaxedPropertiesApplication {
 
     @ConfigurationProperties(prefix = "app-config")
     record AppConfig(Map<String, String> tenantTimezone) {
+
+//        AppConfig(Map<String, String> tenantTimezone) {
+//            this.tenantTimezone = tenantTimezone.entrySet().stream()
+//                    .collect(Collectors.toMap(
+//                            entry -> entry.getKey().toUpperCase(),
+//                            Map.Entry::getValue
+//                    ));
+//        }
     }
 }
 
